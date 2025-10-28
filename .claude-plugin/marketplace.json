@@ -35,6 +35,44 @@
       "agents": [
         "./agents/pragmatic-code-reviewer.md"
       ]
+    },
+    {
+      "name": "git-workflow",
+      "source": "./plugins/git-workflow",
+      "description": "Smart git workflow orchestrator with intelligent intent recognition for commits, pushes, rebases, and PR management",
+      "version": "1.0.0",
+      "author": {
+        "name": "Vlad Semenchuk",
+        "url": "https://github.com/vlad-semenchuk"
+      },
+      "homepage": "https://github.com/vlad-semenchuk/agents",
+      "repository": "https://github.com/vlad-semenchuk/agents",
+      "license": "MIT",
+      "keywords": [
+        "git",
+        "workflow",
+        "automation",
+        "commit",
+        "push",
+        "pr",
+        "rebase"
+      ],
+      "category": "git",
+      "strict": false,
+      "commands": [
+        "./commands/git-workflow.md",
+        "./commands/git-commit.md",
+        "./commands/git-branch.md",
+        "./commands/git-pr.md",
+        "./commands/git-push.md",
+        "./commands/git-rebase.md"
+      ],
+      "agents": [
+        "./agents/git-workflow-coordinator.md",
+        "./agents/git-commit-specialist.md",
+        "./agents/git-pr-specialist.md",
+        "./agents/git-conflict-resolver.md"
+      ]
     }
   ]
 }

@@ -1,0 +1,40 @@
+{
+  "name": "claude-code-workflows",
+  "owner": {
+    "name": "Vlad Semenchuk",
+    "email": "vladyslav.semenchuk9@gmail.com",
+    "url": "https://github.com/vlad-semenchuk"
+  },
+  "metadata": {
+    "description": "Production-ready workflows marketplace",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "pragmatic-code-reviewer",
+      "source": "./plugins/pragmatic-code-reviewer",
+      "description": "Pragmatic code review with actionable feedback and best practices",
+      "version": "1.0.0",
+      "author": {
+        "name": "Vlad Semenchuk",
+        "url": "https://github.com/vlad-semenchuk"
+      },
+      "homepage": "https://github.com/vlad-semenchuk/agents",
+      "repository": "https://github.com/vlad-semenchuk/agents",
+      "license": "MIT",
+      "keywords": [
+        "code-review",
+        "best-practices",
+        "code-quality"
+      ],
+      "category": "code-review",
+      "strict": false,
+      "commands": [
+        "./commands/pragmatic-code-review.md"
+      ],
+      "agents": [
+        "./agents/pragmatic-code-reviewer.md"
+      ]
+    }
+  ]
+}

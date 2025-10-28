@@ -1,0 +1,9 @@
+{
+  "name": "pragmatic-code-reviewer",
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"]
+    }
+  }
+}

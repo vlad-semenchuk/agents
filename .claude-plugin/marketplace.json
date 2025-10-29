@@ -30,7 +30,7 @@
       "category": "code-review",
       "strict": false,
       "commands": [
-        "./commands/pragmatic-code-review.md"
+        "./commands/review.md"
       ],
       "agents": [
         "./agents/pragmatic-code-reviewer.md"

@@ -89,7 +89,7 @@ Thorough code review agent that balances engineering excellence with development
 
 **Usage:**
 ```bash
-/pragmatic-code-review
+/review
 ```
 
 **Key Features:**

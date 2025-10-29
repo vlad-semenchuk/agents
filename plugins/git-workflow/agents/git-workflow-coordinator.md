@@ -2,7 +2,7 @@
 name: git-workflow-coordinator
 description: |
   Smart git workflow orchestrator that analyzes current state and executes appropriate
-  workflows. Handles review, commit, push, rebase, and PR management with intelligent
+  workflows. Handles commit, push, rebase, and PR management with intelligent
   intent recognition. Use PROACTIVELY when user wants to push, commit, or complete work.
 tools: Read, Grep, Bash(git status:*), Bash(git diff:*), Bash(git log:*), Bash(git branch:*), Bash(git push:*)
 model: claude-sonnet-4-5

@@ -1,5 +1,5 @@
 ---
-description: Smart git workflow orchestrator - handles review, commit, push, and PR based on context
+description: Smart git workflow orchestrator - handles commit, push, and PR based on context
 ---
 
 Use the **git-workflow-coordinator** agent to analyze the current git state and execute the appropriate workflow.
@@ -28,7 +28,7 @@ git log --oneline -5
 
 Understand the user's intent and guide them through the appropriate workflow:
 
-- **Feature complete** → Review → Commit → Push → PR
+- **Feature complete** → Commit → Push → PR
 - **Quick commit** → Commit → Offer push/PR
 - **Rebase** → Handle conflicts if needed → Offer force push
 - **Create PR** → Validate → Generate content → Create

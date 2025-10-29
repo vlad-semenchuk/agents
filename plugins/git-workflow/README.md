@@ -34,7 +34,7 @@ gh auth login
 Smart orchestrator that analyzes your current git state and executes the appropriate workflow based on context.
 
 **Use cases:**
-- Feature complete → Review → Commit → Push → PR
+- Feature complete → Commit → Push → PR
 - Quick commit → Commit → Offer push/PR
 - Rebase → Handle conflicts if needed → Offer force push
 - Create PR → Validate → Generate content → Create

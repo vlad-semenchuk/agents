@@ -1,5 +1,5 @@
 ---
-description: Complete push workflow - review, commit, push, and create/update PR automatically
+description: Complete push workflow - commit, push, and create/update PR automatically
 ---
 
 Use the **git-workflow-coordinator** agent with intent to push changes and manage PR.
@@ -23,7 +23,7 @@ git branch --show-current
 Push changes and manage PR automatically to `$TARGET_BRANCH`.
 
 The git-workflow-coordinator should:
-1. Review and commit uncommitted changes
+1. Commit uncommitted changes
 2. Offer rebase if branch is behind
 3. Push to remote
 4. Delegate to **git-pr-specialist** (auto creates/updates PR)

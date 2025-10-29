@@ -30,7 +30,7 @@ gh auth login
 
 ## Commands
 
-### `/git-workflow`
+### `/git-workflow:git-workflow`
 Smart orchestrator that analyzes your current git state and executes the appropriate workflow based on context.
 
 **Use cases:**
@@ -39,7 +39,7 @@ Smart orchestrator that analyzes your current git state and executes the appropr
 - Rebase → Handle conflicts if needed → Offer force push
 - Create PR → Validate → Generate content → Create
 
-### `/git-commit`
+### `/git-workflow:git-commit`
 Analyze changes and create atomic, searchable commits with conventional commit messages.
 
 **Features:**
@@ -48,7 +48,7 @@ Analyze changes and create atomic, searchable commits with conventional commit m
 - Generates conventional commit messages
 - Follows repository commit style
 
-### `/git-branch`
+### `/git-workflow:git-branch`
 Create a new branch with smart naming conventions and type inference.
 
 **Branch naming pattern:**
@@ -67,11 +67,11 @@ Create a new branch with smart naming conventions and type inference.
 
 **Example:**
 ```bash
-/git-branch add user authentication
+/git-workflow:git-branch add user authentication
 # Creates: feature/add-user-authentication
 ```
 
-### `/git-push`
+### `/git-workflow:git-push`
 Complete push workflow: commit → push → create/update PR.
 
 **Workflow:**
@@ -82,7 +82,7 @@ Complete push workflow: commit → push → create/update PR.
 5. Automatically creates or updates PR
 6. Shows final summary
 
-### `/git-pr`
+### `/git-workflow:git-pr`
 Create or update a pull request for the current branch.
 
 **Features:**
@@ -91,7 +91,7 @@ Create or update a pull request for the current branch.
 - Detects whether to create new or update existing PR
 - Links to PR after creation
 
-### `/git-rebase`
+### `/git-workflow:git-rebase`
 Rebase current branch onto target branch.
 
 **Workflow:**
@@ -102,8 +102,8 @@ Rebase current branch onto target branch.
 
 **Usage:**
 ```bash
-/git-rebase              # Rebases onto main (default)
-/git-rebase develop      # Rebases onto develop
+/git-workflow:git-rebase              # Rebases onto main (default)
+/git-workflow:git-rebase develop      # Rebases onto develop
 ```
 
 ## Specialist Agents
@@ -127,7 +127,7 @@ Handles merge conflicts during rebase operations. Provides clear guidance and as
 
 ### Complete workflow (feature ready to ship)
 ```bash
-/git-push
+/git-workflow:git-push
 ```
 This will:
 - Commit any uncommitted changes
@@ -136,50 +136,50 @@ This will:
 
 ### Just commit changes
 ```bash
-/git-commit
+/git-workflow:git-commit
 ```
 
 ### Create a new feature branch
 ```bash
-/git-branch implement oauth login
+/git-workflow:git-branch implement oauth login
 # Creates: feature/implement-oauth-login
 ```
 
 ### Fix a bug on a new branch
 ```bash
-/git-branch fix broken validation
+/git-workflow:git-branch fix broken validation
 # Creates: fix/broken-validation
 ```
 
 ### Sync with main
 ```bash
-/git-rebase main
+/git-workflow:git-rebase main
 ```
 
 ### Let the coordinator decide
 ```bash
-/git-workflow
+/git-workflow:git-workflow
 ```
 The coordinator will analyze your state and suggest the best action.
 
 ## Workflows
 
 ### Feature Development Flow
-1. Create branch: `/git-branch add feature-name`
+1. Create branch: `/git-workflow:git-branch add feature-name`
 2. Make changes to your code
-3. Commit when ready: `/git-commit`
-4. Push and create PR: `/git-push`
-5. Update after feedback: make changes → `/git-push` (updates PR)
+3. Commit when ready: `/git-workflow:git-commit`
+4. Push and create PR: `/git-workflow:git-push`
+5. Update after feedback: make changes → `/git-workflow:git-push` (updates PR)
 
 ### Bug Fix Flow
-1. Create branch: `/git-branch fix bug-description`
+1. Create branch: `/git-workflow:git-branch fix bug-description`
 2. Fix the bug
-3. Complete workflow: `/git-push`
+3. Complete workflow: `/git-workflow:git-push`
 
 ### Sync and Update Flow
-1. Rebase on main: `/git-rebase main`
+1. Rebase on main: `/git-workflow:git-rebase main`
 2. Resolve conflicts if needed (guided by git-conflict-resolver)
-3. Force push: `/git-push`
+3. Force push: `/git-workflow:git-push`
 
 ## Error Handling
 
@@ -192,8 +192,8 @@ All agents follow a consistent error handling pattern:
 
 ## Best Practices
 
-1. **Use `/git-push` for complete workflows** - It handles everything from commit to PR
-2. **Let the coordinator help** - Use `/git-workflow` when unsure what to do
+1. **Use `/git-workflow:git-push` for complete workflows** - It handles everything from commit to PR
+2. **Let the coordinator help** - Use `/git-workflow:git-workflow` when unsure what to do
 3. **Branch naming matters** - Descriptive branch names improve collaboration
 4. **Atomic commits** - Let git-commit-specialist group related changes
 5. **Review before force push** - Always review suggested actions during rebase

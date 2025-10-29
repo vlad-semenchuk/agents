@@ -51,12 +51,12 @@ Smart git workflow orchestrator that analyzes current state and executes appropr
 
 **Usage:**
 ```bash
-/git-workflow     # Smart orchestrator - analyzes state and executes appropriate workflow
-/git-commit       # Create atomic commits with conventional format
-/git-branch       # Create a new branch with smart naming
-/git-push         # Complete push workflow (commit, push, create/update PR)
-/git-pr           # Create or update pull request
-/git-rebase       # Rebase current branch onto target
+/git-workflow:git-workflow     # Smart orchestrator - analyzes state and executes appropriate workflow
+/git-workflow:git-commit       # Create atomic commits with conventional format
+/git-workflow:git-branch       # Create a new branch with smart naming
+/git-workflow:git-push         # Complete push workflow (commit, push, create/update PR)
+/git-workflow:git-pr           # Create or update pull request
+/git-workflow:git-rebase       # Rebase current branch onto target
 ```
 
 **Key Features:**
@@ -89,7 +89,7 @@ Thorough code review agent that balances engineering excellence with development
 
 **Usage:**
 ```bash
-/review
+/pragmatic-code-reviewer:review
 ```
 
 **Key Features:**

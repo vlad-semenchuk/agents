@@ -11,7 +11,7 @@ Thorough code review agent that balances engineering excellence with development
 ## Usage
 
 ```bash
-/review
+/pragmatic-code-reviewer:review
 ```
 
 ## Features
